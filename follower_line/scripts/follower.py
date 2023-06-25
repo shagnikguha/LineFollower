@@ -12,7 +12,7 @@ from geometry_msgs.msg import Twist
 class Follower:
   def __init__(self):
     self.bridge = cv_bridge.CvBridge()
-    #cv2.namedWindow("window", 1)
+
     self.image_sub = rospy.Subscriber('/rrbot/camera1/image_raw', 
                                       Image, self.image_callback)
     self.cmd_vel_pub = rospy.Publisher('/cmd_vel',
@@ -38,7 +38,7 @@ class Follower:
       # CONTROL starts
       err = cx - w/2
 
-      # Define deadband threshold
+      # Deadband threshold
       deadband = 10  # Adjust the deadband threshold as per your requirements
 
       if abs(err) < deadband:
@@ -46,7 +46,7 @@ class Follower:
         self.twist.angular.z = 0.0
       else:
         # Apply proportional control with scaling factor
-        scaling_factor = 0.005  # Adjust the scaling factor as per your requirements
+        scaling_factor = 0.005 
         self.twist.angular.z = -scaling_factor * err
 
       self.twist.linear.x = 0.2
@@ -60,5 +60,4 @@ class Follower:
 rospy.init_node('follower')
 follower = Follower()
 rospy.spin()
-# END ALL
 
