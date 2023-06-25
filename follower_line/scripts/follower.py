@@ -33,15 +33,26 @@ class Follower:
     mask_black[int(search_bot):h, 0:int(w)] = 0
     M = cv2.moments(mask_black)
     if M['m00'] > 0:
-      cx = int(M['m10']/M['m00'])
-      cy = int(M['m01']/M['m00'])
-      #cv2.circle(image, (cx, cy), 20, (0,0,255), -1)
+      cx = int(M['m10'] / M['m00'])
+      cy = int(M['m01'] / M['m00'])
       # CONTROL starts
       err = cx - w/2
+
+      # Define deadband threshold
+      deadband = 10  # Adjust the deadband threshold as per your requirements
+
+      if abs(err) < deadband:
+        # Within deadband, set angular velocity to zero
+        self.twist.angular.z = 0.0
+      else:
+        # Apply proportional control with scaling factor
+        scaling_factor = 0.005  # Adjust the scaling factor as per your requirements
+        self.twist.angular.z = -scaling_factor * err
+
       self.twist.linear.x = 0.2
-      self.twist.angular.z = -float(err) / 100
       self.cmd_vel_pub.publish(self.twist)
       # CONTROL ends
+
     cv2.imshow("mask",mask_black)
     cv2.imshow("output", image)
     cv2.waitKey(3)
@@ -50,3 +61,4 @@ rospy.init_node('follower')
 follower = Follower()
 rospy.spin()
 # END ALL
+
