@@ -324,7 +324,7 @@
          <gaussianNoise>0.005</gaussianNoise>
          <alwaysOn>true</alwaysOn>
          <updateRate>50</updateRate>
-         <topicName>sensor/ir_front0</topicName>
+         <topicName>ir_sensor_0</topicName>
          <frameName>base_ir_front0</frameName>
          <radiation>INFRARED</radiation>
          <fov>0.2</fov>
@@ -388,7 +388,7 @@
          <gaussianNoise>0.005</gaussianNoise>
          <alwaysOn>true</alwaysOn>
          <updateRate>50</updateRate>
-         <topicName>sensor/ir_front1</topicName>
+         <topicName>ir_sensor_1</topicName>
          <frameName>base_ir_front1</frameName>
          <radiation>INFRARED</radiation>
          <fov>0.2</fov>
@@ -452,7 +452,7 @@
          <gaussianNoise>0.005</gaussianNoise>
          <alwaysOn>true</alwaysOn>
          <updateRate>50</updateRate>
-         <topicName>sensor/ir_front2</topicName>
+         <topicName>ir_sensor_2</topicName>
          <frameName>base_ir_front2</frameName>
          <radiation>INFRARED</radiation>
          <fov>0.2</fov>
@@ -516,7 +516,7 @@
          <gaussianNoise>0.005</gaussianNoise>
          <alwaysOn>true</alwaysOn>
          <updateRate>50</updateRate>
-         <topicName>sensor/ir_front3</topicName>
+         <topicName>ir_sensor_3</topicName>
          <frameName>base_ir_front3</frameName>
          <radiation>INFRARED</radiation>
          <fov>0.2</fov>
@@ -581,7 +581,7 @@
          <gaussianNoise>0.005</gaussianNoise>
          <alwaysOn>true</alwaysOn>
          <updateRate>50</updateRate>
-         <topicName>sensor/ir_front4</topicName>
+         <topicName>ir_sensor_4</topicName>
          <frameName>base_ir_front4</frameName>
          <radiation>INFRARED</radiation>
          <fov>0.2</fov>
@@ -645,7 +645,7 @@
          <gaussianNoise>0.005</gaussianNoise>
          <alwaysOn>true</alwaysOn>
          <updateRate>50</updateRate>
-         <topicName>sensor/ir_front5</topicName>
+         <topicName>ir_sensor_5</topicName>
          <frameName>base_ir_front5</frameName>
          <radiation>INFRARED</radiation>
          <fov>0.2</fov>
@@ -709,7 +709,7 @@
          <gaussianNoise>0.005</gaussianNoise>
          <alwaysOn>true</alwaysOn>
          <updateRate>50</updateRate>
-         <topicName>sensor/ir_front6</topicName>
+         <topicName>ir_sensor_6</topicName>
          <frameName>base_ir_front6</frameName>
          <radiation>INFRARED</radiation>
          <fov>0.2</fov>
@@ -773,7 +773,7 @@
          <gaussianNoise>0.005</gaussianNoise>
          <alwaysOn>true</alwaysOn>
          <updateRate>50</updateRate>
-         <topicName>sensor/ir_front7</topicName>
+         <topicName>ir_sensor_7</topicName>
          <frameName>base_ir_front7</frameName>
          <radiation>INFRARED</radiation>
          <fov>0.2</fov>
@@ -781,7 +781,7 @@
    </sensor>  
    </gazebo>
 
-
+  <!-- 
   <joint name="ir_back_joint" type="fixed">
     <axis xyz="0 1 0" />
     <origin rpy="0 1.5707 0" xyz="-0.2 0 -0.034" />
@@ -845,4 +845,5 @@
       </plugin>
    </sensor>  
   </gazebo>
+  -->
 </robot>
