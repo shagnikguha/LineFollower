@@ -1,7 +1,14 @@
 # LineFollower
 This is line follower code using ROS Noetic and OpenCV. I am using Gazebo to run the simulation.
 
-Package "techno_x" contains URDF model of the robot, several test worlds and their launch files.(The robot model is stored in /techno_x/urdf/robo.xacro)
+Package "techno_x" contains URDF model of the robot, several test worlds and their launch files.
+(The robot model is stored in /techno_x/urdf/robo.xacro)
 
-Package "follower_line" consists of the OpenCV code (follower2.py), test world and a launch file to ope n the world (black.launch)
-          this package also contains "follower3.py" which combines the functionality of "follower.py" and endpoint detection(detects yellow in the endpoint) and stops
+Package "follower_line" consists of the OpenCV code (follower3.py), test world and a launch file to open the world (black.launch)
+("follower_line/scripts/follower3.py      and      "follower_line/launch/black.launch")
+
+
+
+
+https://github.com/shagnikguha/LineFollower/assets/125911642/67073324-4328-45e5-97c3-1c6937732f6b
+
