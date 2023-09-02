@@ -15,8 +15,8 @@ class PID:
         self.kp = kp        #proportional constant
         self.ki = ki        #integral constant
         self.kd = kd        #differential constant
-        self.w_dist = 0     #desired distance from wall
-        self.c_dist = 0     #current distance from wall
+        self.w_dist = 0     #desired distance from destination
+        self.c_dist = 0     #current distance from destination
         self.Error = 0      #current error
         self.kiError = 0    #error sum
         self.prevError = 0  #previous error
