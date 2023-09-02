@@ -12,3 +12,7 @@ Package "follower_line" consists of the OpenCV code (follower3.py), test world a
 
 https://github.com/shagnikguha/LineFollower/assets/125911642/67073324-4328-45e5-97c3-1c6937732f6b
 
+
+
+*Update: follower2.py is the updated code using a PID class to calculate angke*
+
