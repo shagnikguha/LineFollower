@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+  <node name="camera_publisher" pkg="follower_line" type="node_custom_cam.py" output="screen">
+    <!-- Additional parameters for the follower.py node if needed -->
+  </node>
+
+  <node name="camera_subscriber" pkg="follower_line" type="image_read.py" output="screen">
+    <!-- Additional parameters for the endpoint.py node if needed -->
+  </node>
+</launch>
