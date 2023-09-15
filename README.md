@@ -17,3 +17,5 @@ https://github.com/shagnikguha/LineFollower/assets/125911642/67073324-4328-45e5-
 *Update 1: follower2.py is the updated code using a PID class to calculate angle*         
 
 *Update 2: Added code to make webcam or any other usb camera publish to a topic using Open_CV*
+
+*Update 3: Added new launch file that uses "usb_cam" package to access external cameras*
