@@ -1,21 +1,57 @@
-# LineFollower
-This is line follower code using ROS Noetic and OpenCV. I am using Gazebo to run the simulation.
+# Line Follower with ROS Noetic and OpenCV
 
-Package "techno_x" contains URDF model of the robot, several test worlds and their launch files.
-(The robot model is stored in /techno_x/urdf/robo.xacro)
+This project implements a Line Follower robot simulation using ROS Noetic and OpenCV, with Gazebo as the simulation environment.
 
-Package "follower_line" consists of the OpenCV code (follower3.py), test world and a launch file to open the world (black.launch)
-("follower_line/scripts/follower3.py      and      "follower_line/launch/black.launch")
+## Project Structure
 
+### techno_x Package
+- **URDF Model**: The robot model is defined in `/techno_x/urdf/robo.xacro`.
+- **Test Worlds and Launch Files**: Several test worlds and their corresponding launch files are included in the package.
 
+### follower_line Package
+- **OpenCV Code**: The line following logic is implemented in the Python script `follower2.py`, located in `follower_line/scripts/`.
+- **Test World and Launch File**: The package includes a test world and a launch file (`black.launch`) to initiate the simulation. Introduced a new launch file that leverages the "usb_cam" package to access external cameras, providing flexibility for different camera setups.
 
+## Getting Started
 
-https://github.com/shagnikguha/LineFollower/assets/125911642/67073324-4328-45e5-97c3-1c6937732f6b
+1. Clone this repository into your ROS workspace:
 
+    ```bash
+    git clone https://github.com/shagnikguha/LineFollower.git
+    ```
 
+2. Build the packages:
 
-*Update 1: follower2.py is the updated code using a PID class to calculate angle*         
+    ```bash
+    cd <your_ros_workspace>
+    catkin_make
+    ```
 
-*Update 2: Added code to make webcam or any other usb camera publish to a topic using Open_CV*
+## Running the Simulation
 
-*Update 3: Added new launch file that uses "usb_cam" package to access external cameras*
+1. Launch the Gazebo simulation with the line follower robot:
+
+    ```bash
+    roslaunch follower_line black.launch
+    ```
+
+2. [Optional] To utilize an external camera, launch the new launch file:
+
+    ```bash
+    roslaunch follower_line external_camera.launch
+    ```
+
+## Additional Notes
+
+- Carefully review and modify launch files and parameters to suit your specific setup.
+- Explore and customize the code (`follower2.py` and `follower3.py`) to meet your project requirements.
+
+## Contribution
+
+Feel free to contribute to this project by creating issues or submitting pull requests.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+For a visual overview, visit the [Line Follower Project](https://github.com/shagnikguha/LineFollower) on GitHub.
