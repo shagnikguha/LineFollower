@@ -10,7 +10,7 @@ This project implements a Line Follower robot simulation using ROS Noetic and Op
 
 ### follower_line Package
 - **OpenCV Code**: The line following logic is implemented in the Python script `follower2.py`, located in `follower_line/scripts/`.
-- **Test World and Launch File**: The package includes a test world and a launch file (`black.launch`) to initiate the simulation. Introduced a new launch file that leverages the "usb_cam" package to access external cameras, providing flexibility for different camera setups.
+- **Test World and Launch File**: The package includes a test world and a launch file (`black.launch`) to initiate the simulation. 
 
 ## Getting Started
 
@@ -40,18 +40,6 @@ This project implements a Line Follower robot simulation using ROS Noetic and Op
     ```bash
     roslaunch follower_line external_camera.launch
     ```
+### Update:
+Introduced a new launch file in 'follower_line/launch' that leverages the "usb_cam" package to access external cameras, providing flexibility for different camera setups.
 
-## Additional Notes
-
-- Carefully review and modify launch files and parameters to suit your specific setup.
-- Explore and customize the code (`follower2.py` and `follower3.py`) to meet your project requirements.
-
-## Contribution
-
-Feel free to contribute to this project by creating issues or submitting pull requests.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
-For a visual overview, visit the [Line Follower Project](https://github.com/shagnikguha/LineFollower) on GitHub.
