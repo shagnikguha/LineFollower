@@ -42,4 +42,8 @@ This project implements a Line Follower robot simulation using ROS Noetic and Op
     roslaunch follower_line my_cam_launch.launch
     ```
     Make sure to add the proper topic in the `follower2.py` code
-    
+
+## Simulation:
+
+https://github.com/shagnikguha/LineFollower/assets/125911642/56e0bae2-bf9b-4712-aa48-ff421f2fad69
+
