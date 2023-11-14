@@ -40,6 +40,6 @@ This project implements a Line Follower robot simulation using ROS Noetic and Op
     ```bash
     roslaunch follower_line external_camera.launch
     ```
-### Update:
+### Update
 Introduced a new launch file in `follower_line/launch` that leverages the "usb_cam" package to access external cameras, providing flexibility for different camera setups.
 
